@@ -25,8 +25,8 @@
                     echo "<tr>";
                     echo "<td>" . $registro['nombre'] . "</td>";
                     echo "<td>" . $registro['edad'] . ' años</td>';
-                    echo "<td>" . "<a href='modificarempleado.php?empleadoid=" . $registro['id'] . "'>Modificar</a></td>";
-                    echo "<td>" . "<a href='eliminarempleado.php?empleadoid=" . $registro['id'] . "'>Eliminar</a></td>";
+                    echo "<td>" . "<a href='modificarempleado.php?id_empleado=" . $registro['id'] . "'>Modificar</a></td>";
+                    echo "<td>" . "<a href='eliminarempleado.php?id_empleado=" . $registro['id'] . "'>Eliminar</a></td>";
                     echo "</tr>";
                 }
             ?>
