@@ -1,0 +1,16 @@
+{
+    "personas": [
+        {
+            "name": "Fer",
+            "country": "Spain"
+        },
+        {
+            "name": "Agus",
+            "country": "Argentina"
+        },
+        {
+            "name": "Juan",
+            "country": "United States"
+        }
+    ]
+}

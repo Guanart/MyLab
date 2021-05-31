@@ -1,0 +1,1 @@
+<h2>El elemento ha sido modificado dinámicamente a través de AJAX</h2>

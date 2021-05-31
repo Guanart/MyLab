@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function loadXMLDoc(){
+            var xmlhttp;                                    // Podríamos simplemente hacer: var xmlhttp = new XMLHttpRequest();
+            if (window.XMLHttpRequest){                     // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else{                                           // code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.onreadystatechange=function(){
+                if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                    var jsonResponse = xmlhttp.responseText;
+                    var objeto_json = JSON.parse(jsonResponse);
+                    var personasRecibidas = objeto_json.personas;
+                    // document.getElementById("myDiv").innerHTML=objeto_json.personas;
+
+                    for (var i=0; i<personasRecibidas.length;i++) {
+                        var nombrePersona = objeto_json.personas[i].name;
+                        var paisPersona = objeto_json.personas[i].country;
+                        document.getElementById("myDiv").innerHTML='Me llamo '+nombrePersona+' y soy de '+paisPersona;
+                    }
+                }
+            }
+            xmlhttp.open("GET","ejemploJSON.json",true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+<div id="myDiv"><h2>Se modificará por AJAX este elemento</h2></div>
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+</body>
+</html>
