@@ -5,8 +5,8 @@
     <script>
         function loadXMLDoc(){
             var xmlhttp;                                    // Podríamos simplemente hacer: var xmlhttp = new XMLHttpRequest();
-            if (window.XMLHttpRequest){                     // code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
+            if (window.XMLHttpRequest){                     // Consulta si es posible usar XMLHttpRequest             
+                xmlhttp=new XMLHttpRequest();               // code for IE7+, Firefox, Chrome, Opera, Safari
             }
             else{                                           // code for IE6, IE5
                 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");

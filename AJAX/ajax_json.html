@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script>
-        function loadXMLDoc(){
+        function loadXMLDoc (){
             var xmlhttp;                                    // Podríamos simplemente hacer: var xmlhttp = new XMLHttpRequest();
             if (window.XMLHttpRequest){                     // code for IE7+, Firefox, Chrome, Opera, Safari
                 xmlhttp=new XMLHttpRequest();
@@ -16,12 +16,12 @@
                 if (xmlhttp.readyState==4 && xmlhttp.status==200){
                     var jsonResponse = xmlhttp.responseText;
                     var objeto_json = JSON.parse(jsonResponse);
-                    var personasRecibidas = objeto_json.personas;
-                    // document.getElementById("myDiv").innerHTML=objeto_json.personas;
+                    var personasRecibidas = objeto_json.personas.person;
+                    console.log(personasRecibidas);
 
-                    for (var i=0; i<personasRecibidas.length;i++) {
-                        var nombrePersona = objeto_json.personas[i].name;
-                        var paisPersona = objeto_json.personas[i].country;
+                    for (let i=0; i<personasRecibidas.length;i++) {
+                        var nombrePersona = objeto_json.personas.person[i].name;
+                        var paisPersona = objeto_json.personas.person[i].country;
                         document.getElementById("myDiv").innerHTML='Me llamo '+nombrePersona+' y soy de '+paisPersona;
                     }
                 }

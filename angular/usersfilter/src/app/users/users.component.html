@@ -1,0 +1,24 @@
+<h1>Users list</h1>
+<span>Search:</span>
+&nbsp;
+<input type="text" placeholder="Filter users..." [(ngModel)]="searchText" value="">     
+<br><br>
+
+<table [style.border]="'2px solid black'">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usuarios.user"></tr>
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Falta implementar funcionalidad de filtrado -->

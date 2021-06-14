@@ -23,9 +23,10 @@
                 mostrarCiudades();
                 return;
             }
+            
             xmlhttp=new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+            xmlhttp.onreadystatechange = function() {                   // cuando se produzca un cambio en el estado, ejecutar la función
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {     // Normalmente usaremos estos dos valores, 4 que almacena un estado de la petición satisfactorio, y 200, el código HTTP de respuesta correcta.
                     var jsonResponse = xmlhttp.responseText;
                     var objeto_json = JSON.parse(jsonResponse);
                     var paisesRecibidos = objeto_json.listadoPaises.pais;
@@ -40,7 +41,7 @@
                     }
                 }
             }
-            xmlhttp.open("GET","listadoPaises.json?nocache=' + (new Date()).getTime()");
+            xmlhttp.open("GET","listadoPaises.json?nocache=' + (new Date()).getTime()");    // a la URL le agregamos la query con esos datos extras, para que cada solicitud sea distinta, y así evitar que se cachee el fichero.
             xmlhttp.send();
         }
 

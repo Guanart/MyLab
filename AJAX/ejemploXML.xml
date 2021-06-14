@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<person>
-    <name>Pepe</name>
-    <age>12</age>
-</person>
+<personas>
+    <person>
+        <name>Fer</name>
+        <country>Spain</country>
+    </person>
+    <person>
+        <name>Agus</name>
+        <country>Argentina</country>
+    </person>
+    <person>
+        <name>Juan</name>
+        <country>United States</country>
+    </person>
+</personas>
