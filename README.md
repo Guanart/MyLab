@@ -24,3 +24,7 @@ Primer intento de funcionalidad de login (sin interacción con base de datos, cr
 #### /css ; /images
 
 Archivos CSS, imágenes, extras.
+
+
+#### Another labs
+https://github.com/leetCipher/bug-bounty-labs
